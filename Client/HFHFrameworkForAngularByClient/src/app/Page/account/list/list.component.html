@@ -1,0 +1,38 @@
+<!--//div.container-->
+<div class="container">
+  <!--//b4-card-head-foot-->
+  <div class="card">
+    <div class="card-header">
+      ユーザ一覧
+    </div>
+    <div class="card-body">
+      <!--//b4-table-defalult -->
+      <table class="table text-center">
+        <thead>
+          <tr>
+            <th>番号</th>
+            <th>名前</th>
+            <th>備考</th>
+            <th>イベント</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let obj of accounts" class="text-center">
+            <td>{{obj.id}}</td>
+            <td class="text-left">{{obj.username}}</td>
+            <td class="text-left">{{obj.remarks}}</td>
+            <td>
+              <button (click)="edit(obj)" class="btn btn-success" type="button">編集</button>
+              <button (click)="delete(obj)" class="btn btn-success ml-2" type="button">削除</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="card-footer">
+      <div class="float-right">
+        <button (click)="reload()" class="btn btn-danger" type="button">リフレッシュ</button>
+      </div>
+    </div>
+  </div>
+</div>

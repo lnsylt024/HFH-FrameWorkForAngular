@@ -1,0 +1,23 @@
+<div class="container col-md-6">
+  <!--//card-header-->
+  <div class="card">
+    <div class="card-header">
+      <h3>ユーザ更新</h3>
+    </div>
+    <div class="card-body">
+      <!--//form-post-->
+      <form action="" method="post">
+        <!--//b-form-group-->
+        <div class="form-group">
+          <label for="id_username">名前</label>
+          <input [(ngModel)]="account.username" id="id_username" class="form-control" type="text" name="username">
+        </div>
+        <div class="form-group">
+          <label for="id_bk">備考</label>
+          <textarea [(ngModel)]="account.remarks" id="id_bk" class="form-control" name="remarks" rows="3"></textarea>
+        </div>
+        <button (click)="update(account)" class="btn btn-primary" type="button">更新</button>
+      </form>
+    </div>
+  </div>
+</div>
